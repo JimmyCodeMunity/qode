@@ -71,7 +71,7 @@ export function ProjectTabs() {
 const DummyContent = () => {
   return (
     (<img
-      src="/linear.webp"
+      src="../images/qodehero.png"
       alt="dummy image"
       width="1000"
       height="1000"

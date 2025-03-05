@@ -22,7 +22,7 @@ const Menu = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <a variant="" className="bg-black text-white border-none hover:bg-black">Account</a>
+                <a variant="" className="md:bg-black bg-white md:text-white text-black border-none md:hover:bg-black">Account</a>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -84,39 +84,57 @@ const Menu = () => {
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
-    const handleOpenandClose = ()=>{
+    const handleOpenandClose = () => {
         setOpen(!open)
     }
     return (
         <div className='w-full sm:px-16 px-6 sm:py-6 py-6 bg-black'>
-            {open &&
-                <div className="absolute top-0 left-0 bg-white h-auto py-4 w-full rounded-b-xl z-20">
-                    <div className="w-full flex flex-col">
-                        <div className="w-full flex flex-row px-6 justify-between items-center">
-                            <div>
-                                <a href="">
-                                    <h1 className="font-poppins text-2xl font-bold bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Qode</h1>
-                                </a>
-                            </div>
-                            <div onClick={handleOpenandClose} className="w-12 h-12 rounded-full bg-black flex flex-row items-center justify-center">
-                                <Icon.X className="text-lime-500 text-4xl" />
-                            </div>
-                        </div>
-                        <ul className="flex flex-col items-center space-y-3 py-1">
-                            {
-                                navlinks.map((nav) => {
-                                    return (
-                                        <li>
-                                            <Link to={nav.path} className="text-black font-poppins">{nav.name}</Link>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </div>
-                </div>
 
-            }
+            <div className="md:hidden block">
+
+
+                {
+                    open && <div className="absolute top-0 left-0 bg-white h-auto py-4 w-full rounded-b-xl z-20">
+                        <div className="w-full flex flex-col">
+                            <div className="w-full flex flex-row px-6 justify-between items-center">
+                                <div>
+                                    <a href="">
+                                        <h1 className="font-poppins text-2xl font-bold bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Qode</h1>
+                                    </a>
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-black flex flex-row items-center justify-center">
+
+                                    <Icon.X onClick={handleOpenandClose} className="text-lime-500 text-4xl" />
+
+
+                                </div>
+                            </div>
+                            <ul className="flex flex-col items-center space-y-3 py-1">
+                                {
+                                    navlinks.map((nav) => {
+                                        return (
+                                            <li>
+                                                <Link to={nav.path} className="text-black font-poppins">{nav.name}</Link>
+                                            </li>
+                                        )
+                                    })
+                                }
+                                <li>
+                                    <Link to="#" className="text-black font-poppins">Register</Link>
+                                </li>
+                                <li>
+                                    <Link to="/login" className="text-black font-poppins">Login</Link>
+                                </li>
+                                <li>
+                                    <Menu />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                }
+            </div>
+
+
 
             <div className="w-full flex flex-row items-center justify-between">
                 <div>
@@ -143,9 +161,16 @@ const Navbar = () => {
                     <Link to="/login" className="text-white font-poppins">Login</Link>
                     <Menu />
                 </div>
-                <div>
-                    <Icon.Menu onClick={handleOpenandClose} color="white" size={30} />
+                <div className='md:hidden block'>
+                    {
+                        open ? (
+                            <Icon.X onClick={handleOpenandClose} className="text-lime-500 text-4xl" />
+                        ) : (
+                            <Icon.Menu onClick={handleOpenandClose} color="white" size={30} />
+                        )
+                    }
                 </div>
+
             </div>
 
 
