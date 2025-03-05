@@ -98,7 +98,7 @@ const Navbar = () => {
                         <div className="w-full flex flex-col">
                             <div className="w-full flex flex-row px-6 justify-between items-center">
                                 <div>
-                                    <a href="">
+                                    <a href="/">
                                         <h1 className="font-poppins text-2xl font-bold bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Qode</h1>
                                     </a>
                                 </div>
