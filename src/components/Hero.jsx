@@ -43,8 +43,8 @@ const Hero = () => {
         <h1
           class="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-lime-500 mb-5 md:text-5xl leading-[50px]"
         >
-          Control your Finances with our {"  "}
-          <span class="bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Smart Tool </span>
+          Learn Software Engineering with {"  "}
+          <span class="bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Qode </span>
         </h1>
         <p
           class="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9"

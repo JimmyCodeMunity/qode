@@ -10,6 +10,7 @@ import { Compare } from '@/components/ui/compare'
 import { HeroParallaxDemo } from '@/components/Parallax'
 import { ProjectTabs } from '@/components/ProjectTabs'
 import { Timelines } from '@/components/TimeLine'
+import Footer from '@/components/Footer'
 
 
 const HomePage = () => {
@@ -23,6 +24,7 @@ const HomePage = () => {
             <Features/>
             <ProjectTabs/>
             <Testimonials/>
+            <Footer/>
             
             
         </div>

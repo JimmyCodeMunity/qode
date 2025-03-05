@@ -120,7 +120,7 @@ export const Compare = ({
   return (
     (<div
       ref={sliderRef}
-      className={cn("w-full h-[800px] overflow-hidden", className)}
+      className={cn("w-full md:h-[800px] h-[300px] overflow-hidden", className)}
       style={{
         position: "relative",
         cursor: slideMode === "drag" ? "grab" : "col-resize",

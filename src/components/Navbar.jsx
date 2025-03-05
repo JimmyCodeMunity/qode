@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { navlinks } from '../constants'
 import { Link } from 'react-router-dom'
 import {
@@ -16,6 +16,7 @@ import {
     DropdownMenuTrigger,
 } from './ui/dropdown-menu'
 import { Button } from './ui/button'
+import * as Icon from 'react-feather'
 
 const Menu = () => {
     return (
@@ -81,15 +82,49 @@ const Menu = () => {
 
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleOpenandClose = ()=>{
+        setOpen(!open)
+    }
     return (
         <div className='w-full sm:px-16 px-6 sm:py-6 py-6 bg-black'>
+            {open &&
+                <div className="absolute top-0 left-0 bg-white h-auto py-4 w-full rounded-b-xl z-20">
+                    <div className="w-full flex flex-col">
+                        <div className="w-full flex flex-row px-6 justify-between items-center">
+                            <div>
+                                <a href="">
+                                    <h1 className="font-poppins text-2xl font-bold bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Qode</h1>
+                                </a>
+                            </div>
+                            <div onClick={handleOpenandClose} className="w-12 h-12 rounded-full bg-black flex flex-row items-center justify-center">
+                                <Icon.X className="text-lime-500 text-4xl" />
+                            </div>
+                        </div>
+                        <ul className="flex flex-col items-center space-y-3 py-1">
+                            {
+                                navlinks.map((nav) => {
+                                    return (
+                                        <li>
+                                            <Link to={nav.path} className="text-black font-poppins">{nav.name}</Link>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+            }
+
             <div className="w-full flex flex-row items-center justify-between">
                 <div>
                     <a href="">
                         <h1 className="font-poppins text-4xl font-bold bg-gradient-to-r from-blue-600 via-lime-500 to-orange-500 bg-clip-text text-transparent">Qode</h1>
                     </a>
                 </div>
-                <div>
+                <div className='hidden md:block'>
                     <ul className="flex flex-row items-center space-x-4">
                         {
                             navlinks.map((nav) => {
@@ -103,12 +138,17 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="flex flex-row space-x-4 items-center">
+                <div className="md:block hidden flex flex-row space-x-4 items-center">
                     <Link to="#" className="text-white font-poppins">Register</Link>
                     <Link to="/login" className="text-white font-poppins">Login</Link>
                     <Menu />
                 </div>
+                <div>
+                    <Icon.Menu onClick={handleOpenandClose} color="white" size={30} />
+                </div>
             </div>
+
+
 
         </div>
     )
