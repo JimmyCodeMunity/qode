@@ -8,7 +8,7 @@ export function ProjectTabs() {
       value: "product",
       content: (
         <div
-          className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-lime-500 to-lime-700">
+          className="w-full overflow-hidden relative h-full rounded-2xl p-1 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-lime-500 to-lime-700">
           <p className="text-white">Product Tab</p>
           <DummyContent />
         </div>

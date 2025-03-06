@@ -5,7 +5,7 @@ import * as Icon from 'react-feather'
 
 export const Services = () => {
   return (
-    <div className="min-h-screen bg-black px-4 py-12 text-zinc-50">
+    <div className="h-auto bg-black px-4 py-12 text-zinc-50">
       {/* <Logo /> */}
       <motion.div
         initial="initial"
@@ -13,7 +13,7 @@ export const Services = () => {
         transition={{
           staggerChildren: 0.05,
         }}
-        className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
+        className="mx-auto grid max-w-7xl grid-flow-dense grid-cols-12 gap-4"
       >
         <HeaderBlock />
         <SocialsBlock />
@@ -21,7 +21,7 @@ export const Services = () => {
         <LocationBlock />
         <EmailListBlock />
       </motion.div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
@@ -59,19 +59,19 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     <img
-      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
+      src="../images/qode.jpg"
       alt="avatar"
       className="mb-4 size-14 rounded-full"
     />
     <h1 className="mb-12 text-4xl font-medium leading-tight">
-      Hi, I'm Tom.{" "}
+      Hi, I'm Qode.{" "}
       <span className="text-zinc-400">
-        I build cool websites like this one.
+        I build cool websites & Apps like this one.
       </span>
     </h1>
     <a
       href="#"
-      className="flex items-center gap-1 text-red-300 hover:underline"
+      className="flex items-center gap-1 text-lime-300 hover:underline"
     >
       Contact me <Icon.ChevronRight color="white" size={20}/>
     </a>
@@ -99,13 +99,13 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-green-600 md:col-span-3"
+      className="col-span-6 bg-neutral-900 md:col-span-3"
     >
       <a
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <Icon.Home color="white" size={20}/>
+        <Icon.Instagram color="pink" size={20}/>
       </a>
     </Block>
     <Block
@@ -113,7 +113,7 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-zinc-50 md:col-span-3"
+      className="col-span-6 bg-black md:col-span-3"
     >
       <a
         href="#"
@@ -155,7 +155,7 @@ const AboutBlock = () => (
 const LocationBlock = () => (
   <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
     <Icon.MapPin color="white" size={20}/>
-    <p className="text-center text-lg text-zinc-400">Cyberspace</p>
+    <p className="text-center text-lg text-zinc-400">Qode</p>
   </Block>
 );
 

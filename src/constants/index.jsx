@@ -8,18 +8,13 @@ export const navlinks = [
     {
         id:2,
         name:'Courses',
-        path:'#courses',
+        path:'/courses',
         icon:'Book'
     },
     {
         id:3,
-        name:'About',
-        path:'/about',
-        icon:'Home'
-    },{
-        id:4,
-        name:'Contact',
-        path:'/contact',
+        name:'Services',
+        path:'/services',
         icon:'Home'
     },
     {
@@ -32,6 +27,17 @@ export const navlinks = [
         id:6,
         name:'Todo',
         path:'/todo',
+        icon:'Home'
+    },{
+        id:7,
+        name:'Components',
+        path:'/components',
+        icon:'Home'
+    },
+    {
+        id:4,
+        name:'Contact',
+        path:'/contact',
         icon:'Home'
     },
 

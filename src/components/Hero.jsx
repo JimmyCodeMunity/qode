@@ -15,12 +15,12 @@ const Hero = () => {
     >
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
         <div
-          class="border border-lime-500 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4"
+          class="border border-lime-500 p-1 w-auto max-w-80 mx-auto rounded-full flex items-center justify-between mb-4"
         >
           <span class="font-inter text-xs font-medium text-white ml-3"
-            >Explore how to use for brands.</span>
+            >Dive into Qode and become better.</span>
           <a
-            href="javascript:;"
+            href="/login"
             class="w-8 h-8 rounded-full flex justify-center items-center bg-lime-600"
           >
             <svg
@@ -52,10 +52,10 @@ const Hero = () => {
           Invest intelligently and discover a better way to manage your entire
           wealth easily.
         </p>
-        <div className="flex-row space-x-4 w-full mx-auto inline-flex items-center justify-center">
+        <div className="md:flex-row md:space-x-4 w-full mx-auto md:inline-flex flex-col items-center justify-center">
         <a
           href="javascript:;"
-          class="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-lime-500 shadow-xs hover:bg-lime-600 transition-all duration-500"
+          class="w-full md:w-auto md:mb-14 mb-5 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-lime-500 shadow-xs hover:bg-lime-600 transition-all duration-500"
         >
           Request A Service
           <svg
