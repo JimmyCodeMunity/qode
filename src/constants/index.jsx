@@ -21,6 +21,18 @@ export const navlinks = [
         name:'Contact',
         path:'/contact',
         icon:'Home'
-    }
+    },
+    {
+        id:5,
+        name:'Plan Board',
+        path:'/planner',
+        icon:'Home'
+    },
+    {
+        id:6,
+        name:'Todo',
+        path:'/todo',
+        icon:'Home'
+    },
 
 ]

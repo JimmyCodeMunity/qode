@@ -5,6 +5,8 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
+import PlanScreen from './pages/PlanScreen'
+import TodoPage from './pages/TodoPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route index path='/' element={<HomePage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/planner' element={<PlanScreen/>}/>
+        <Route path='/todo' element={<TodoPage/>}/>
       </Routes>
     </div>
   )
