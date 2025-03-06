@@ -52,11 +52,12 @@ const Hero = () => {
           Invest intelligently and discover a better way to manage your entire
           wealth easily.
         </p>
+        <div className="flex-row space-x-4 w-full mx-auto inline-flex items-center justify-center">
         <a
           href="javascript:;"
           class="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-lime-500 shadow-xs hover:bg-lime-600 transition-all duration-500"
         >
-          Create an account
+          Request A Service
           <svg
             class="ml-2"
             width="20"
@@ -74,6 +75,29 @@ const Hero = () => {
             />
           </svg>
         </a>
+        <a
+          href="javascript:;"
+          class="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full border border-lime-500 bg-black text-white shadow-xs hover:bg-lime-600 transition-all duration-500"
+        >
+          View Courses
+          <svg
+            class="ml-2"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        </div>
         <div class="flex justify-center">
             <Compare class="rounded-t-3xl h-auto w-full object-cover"/>
           {/* <img

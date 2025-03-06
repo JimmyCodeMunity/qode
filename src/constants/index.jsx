@@ -7,9 +7,9 @@ export const navlinks = [
     },
     {
         id:2,
-        name:'Services',
-        path:'/services',
-        icon:'Home'
+        name:'Courses',
+        path:'#courses',
+        icon:'Book'
     },
     {
         id:3,

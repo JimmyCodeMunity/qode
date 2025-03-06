@@ -114,7 +114,7 @@ const Navbar = () => {
                                     navlinks.map((nav) => {
                                         return (
                                             <li>
-                                                <Link to={nav.path} className="text-black font-poppins">{nav.name}</Link>
+                                                <a href={nav.path} className="text-black font-poppins">{nav.name}</a>
                                             </li>
                                         )
                                     })

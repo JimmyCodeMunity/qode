@@ -11,6 +11,7 @@ import { HeroParallaxDemo } from '@/components/Parallax'
 import { ProjectTabs } from '@/components/ProjectTabs'
 import { Timelines } from '@/components/TimeLine'
 import Footer from '@/components/Footer'
+import { Services } from '@/components/Services'
 
 
 const HomePage = () => {
@@ -18,12 +19,14 @@ const HomePage = () => {
         <div className='w-full bg-black'>
             <Navbar/>
             <Hero/>
-            <Partners/>
+            <Partners id="courses"/>
+            <Testimonials/>
             <HeroParallaxDemo/>
             <Timelines/>
-            <Features/>
+            {/* <Features/> */}
+            <Services/>
             <ProjectTabs/>
-            <Testimonials/>
+            
             <Footer/>
             
             

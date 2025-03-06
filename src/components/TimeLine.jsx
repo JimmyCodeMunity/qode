@@ -5,7 +5,7 @@ import { Timeline } from "./ui/timeline";
 export function Timelines() {
   const data = [
     {
-      title: "2024",
+      title: "Learn Programming",
       content: (
         <div>
           <p
@@ -42,7 +42,7 @@ export function Timelines() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "Web Development",
       content: (
         <div>
           <p
@@ -85,7 +85,7 @@ export function Timelines() {
       ),
     },
     {
-      title: "Changelog",
+      title: "Mobile Development",
       content: (
         <div>
           <p
